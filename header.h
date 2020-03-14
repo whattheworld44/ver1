@@ -4,7 +4,8 @@
 #include <algorithm>
 #include <ctime>
 #include <future>
-#include <thread>
+#include <pthread.h>
+#include <windows.h>
 
 #include "filesystem.h"
 
