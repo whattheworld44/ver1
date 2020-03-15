@@ -11,6 +11,10 @@
 
 #define kc_A 65
 
+#define mode_ID  1
+#define mode_atk 11
+#define mode_dfd 12
+
 
 class hero{
     private:
@@ -31,6 +35,20 @@ class hero{
         int increase(){
             atk = atk + 0.01*atk;
             dfd = dfd + 0.01*dfd;
+        }
+        int hero_info(int mode){
+            switch(mode){
+                case mode_ID:
+                    return this->ID;
+                    break;
+            }
+        }
+        hero operator=(hero& hero_i){
+            hero temp;
+            temp.ID = hero_i.hero_info(mode_ID);
+            temp.atk = /*hero.atk*/123;
+            temp.dfd = /*hero.dfd*/456;
+            return temp;
         }
 
 };
